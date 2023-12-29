@@ -1,20 +1,19 @@
-//your JS code here. If required.
- 
-    function handleInput(input) {
-      const codeContainer = document.getElementById("codeContainer");
-      const inputs = codeContainer.querySelectorAll(".code");
 
-      if (input.value !== "") {
-        // Move to the next input field
-        const nextInput = input.nextElementSibling;
-        if (nextInput) {
-          nextInput.focus();
-        }
-      } else {
-        // Backspace pressed, move to the previous input field
-        const prevInput = input.previousElementSibling;
-        if (prevInput) {
-          prevInput.focus();
-        }
-      }
+function handleInput(input, nextInputIndex) {
+  if (input.value !== "") {
+    const nextInput = document.getElementById("code" + nextInputIndex);
+    if (nextInput) {
+      nextInput.focus();
     }
+  }
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Backspace") {
+    const activeElement = document.activeElement;
+    const prevInput = activeElement.previousElementSibling;
+    if (!activeElement.value && prevInput) {
+      prevInput.focus();
+    }
+  }
+});

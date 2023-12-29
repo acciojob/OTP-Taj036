@@ -8,16 +8,19 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	 <h1 id="verification_heading">Verification</h1>
-  <h2 id="verification_subtext">Enter the 6-digit code:</h2>
-	<div class="code-container" id="codeContainer">
-    <input type="text" class="code" maxlength="1" oninput="handleInput(this)" />
-    <input type="text" class="code" maxlength="1" oninput="handleInput(this)" />
-    <input type="text" class="code" maxlength="1" oninput="handleInput(this)" />
-    <input type="text" class="code" maxlength="1" oninput="handleInput(this)" />
-    <input type="text" class="code" maxlength="1" oninput="handleInput(this)" />
-    <input type="text" class="code" maxlength="1" oninput="handleInput(this)" />
-  </div>
+<h1 id="verification_heading">Verification</h1>
+<h2 id="verification_subtext">Enter the 6-digit code:</h2>
+
+<div class="code-container" id="codeContainer">
+  <input type="text" class="code" maxlength="1" id="code1" oninput="handleInput(this, 2)" />
+  <input type="text" class="code" maxlength="1" id="code2" oninput="handleInput(this, 3)" />
+  <input type="text" class="code" maxlength="1" id="code3" oninput="handleInput(this, 4)" />
+  <input type="text" class="code" maxlength="1" id="code4" oninput="handleInput(this, 5)" />
+  <input type="text" class="code" maxlength="1" id="code5" oninput="handleInput(this, 6)" />
+  <input type="text" class="code" maxlength="1" id="code6" oninput="handleInput(this, 6)" />
+</div>
+
+
     <script type="text/javascript" src="./script.js">
 </script>
 
