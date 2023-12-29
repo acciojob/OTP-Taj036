@@ -1,1 +1,12 @@
 /*  your css code here. If applicable */
+ .code-container {
+      display: flex;
+    }
+
+    .code {
+      width: 2em;
+      text-align: center;
+      margin: 0 0.5em;
+      padding: 0.5em;
+      font-size: 1.2em;
+    }
